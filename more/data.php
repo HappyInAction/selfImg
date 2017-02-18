@@ -1,6 +1,6 @@
 <?php
 
-	header('Content-Type:text/html; charset=utf-8');
+	header('Content-Type:application/json');
 
 	/*获取数据  字符串*/
 	$data = file_get_contents('data.json');
@@ -24,7 +24,5 @@
 
 	/*转化json字符串 输出到前台*/
 	echo json_encode(array('page'=>$page, 'items'=>$result));/*｛items:[]｝*/
-
-	sleep(1);
 
 ?>
