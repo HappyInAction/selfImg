@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft Yahei";
+    background: #f5f5f5;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 40px
+}
+
+.container > .items {
+    position: relative;
+}
+
+.container > .items > .item {
+    width: 216px;
+    position: absolute;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+/*目的是固定高度且不一样*//*目的是固定高度且不一样*/
+.container > .items > .item > img {
+    width: 216px;
+    display: block;
+    height: 240px;
+
+}
+
+/*目的是固定高度且不一样*//*目的是固定高度且不一样*/
+.container > .items > .item:nth-child(4n) > img {
+    width: 100%;
+    display: block;
+    height: 450px;
+
+}
+
+.container > .items > .item > p {
+    margin: 0;
+    padding: 15px;
+    background: #fff;
+}
+
+.container > .btn {
+    width: 280px;
+    height: 40px;
+    margin: 30px auto;
+    text-align: center;
+    line-height: 40px;
+    background-color: #CCC;
+    border-radius: 6px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.container > .loading {
+    background-color: transparent;
+}
+/*有ajax请求就会触动的动画*/
+.overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+}
+.overlay img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100px;
+    margin: -80px 0 0 -50px;
+}
